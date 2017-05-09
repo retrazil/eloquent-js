@@ -1,4 +1,3 @@
-// Your code here.
 function length(obj){
 	var count = 0; 
   	for(var key in obj){
@@ -20,6 +19,9 @@ function deepEqual(obj1, obj2){
             if(!obj2.hasOwnProperty(key)){
                 return false; 
                } 
+          	if(!deepEqual(obj1[key], obj2[key])){
+            	return false; 
+            }
            }
        }
     return true;
